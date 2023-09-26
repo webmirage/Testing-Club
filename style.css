@@ -1,0 +1,243 @@
+:root {
+    --main-color: #2196f3;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Arial";
+}
+
+.game {
+    min-height: 100vh;
+    background-color: #eee;
+}
+
+.container {
+    margin: auto;
+    max-width: 900px;
+}
+
+.name {
+    background-color: var(--main-color);
+    color: #fff;
+    text-align: center;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.message {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    margin: 15px -6px;
+    text-align: center;
+    position: relative;
+}
+
+.message span {
+    font-weight: bold;
+    color: #009688;
+}
+
+.message span::before {
+    content: "{ ";
+}
+.message span::after {
+    content: " }";
+}
+
+.start {
+    text-align: center;
+    font-weight: bold;
+    padding: 15px;
+    background-color: #009688;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.the-word {
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    color: var(--main-color);
+    user-select: none;
+}
+
+.input {
+    margin: 15px 0;
+    width: 100%;
+    font-size: 20px;
+    text-transform: capitalize;
+    text-align: center;
+    border-radius: 6px;
+    caret-color: var(--main-color);
+    padding: 15px;
+    border: 3px solid var(--main-color);
+}
+.input:focus {
+    outline: none;
+}
+
+.upcoming-words {
+    margin: 15px 0;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+}
+
+.upcoming-words div {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 6px;
+    margin: 5px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.control {
+    display: flex;
+    background-color: #fff;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.control span {
+    font-weight: bold;
+    color: #009688;
+}
+
+.finish {
+    font-weight: bold;
+    font-size: 45px;
+    text-align: center;
+    padding: 15px;
+}
+
+.finish span.good {
+    color: #fff;
+    background-color: var(--main-color);
+    padding: 80px;
+    border-radius: 4px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.finish span.bad {
+    color: #fff;
+    background-color: red;
+    padding: 100px;
+    border-radius: 4px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.setting {
+    position: absolute;
+    right: 0;
+    margin: -20px 25px 0px 0px;
+    color: #d60a0a;
+    cursor: pointer;
+    font-size: 16px;
+}
+.setting i {
+    margin-left: 5px;
+}
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #00000080;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-box {
+    width: 600px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: relative;
+}
+.popup-box h2 {
+    text-align: center;
+    color: var(--main-color);
+    margin: 20px 0;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+.popup-box .levels {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.popup-box .levels h3 {
+    margin-bottom: 8px;
+    font-size: 19px;
+    color: #fff;
+    background-color: var(--main-color);
+    width: 100%;
+    text-align: center;
+    padding: 6px;
+    letter-spacing: 1px;
+}
+.popup-box .levels h3 i {
+    margin-left: 8px;
+    font-size: 16px;
+}   
+.popup-box .levels .level {
+    margin: 20px 0;
+    font-size: 18px;
+    color: var(--main-color);
+    font-weight: bold;
+    cursor: pointer;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+}
+.popup-box .levels .level span {
+    font-weight: lighter;
+    font-size: 15px;
+}
+.popup-box .levels .level.active,
+.popup-box .levels .level:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.exit {
+    position: absolute;
+    right: -10px;
+    top: -8px;
+    font-size: 25px;
+    background-color: #ff3c3c;
+    color: #fff;
+    border-radius: 50%;
+    width: 37px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
